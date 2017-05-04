@@ -1,0 +1,13 @@
+Sharepoint lookup to syntax in order to lookup entries from a sharepoint view.
+
+Add the following code / Settings to the Data tab of a Drop-Down List Box Properties window
+
+List box choices
+Select (*) Get Choices from an external data source
+
+Datasource [Name of the list containing values to lookup]  In this example, Keywords
+
+*The following code does a lookup to the Keywords list, and adds entries based on the the Title field = 'ET-MobileDevices'
+
+Entries:  /dfs:myFields/dfs:dataFields/d:SharePointListItem_RW/d:Values[../d:Title = "ET-MobileDevices"]
+
